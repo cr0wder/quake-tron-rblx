@@ -1,0 +1,8 @@
+-- alpha day/night cycle v0.1
+local minutesAfterMidnight = (3 * 60)
+while true do
+	game.Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
+	minutesAfterMidnight = minutesAfterMidnight + 1
+	wait(5000000000)
+end
+-- QUAKE Version, keeps the time at 3am so its dark as tits so we can make it glow like tron, baby. Can use tweaking, will be tweaked. Maybe.
