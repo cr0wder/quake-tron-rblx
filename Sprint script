@@ -1,0 +1,18 @@
+--Sprint script v0.1
+
+wait(1)
+local player = script.Parent.Parent
+local mouse = player:GetMouse()
+standardWalkspeed = player.Character.Humanoid.WalkSpeed
+speedBoost = 2.75
+
+mouse.KeyDown:connect(function (key)
+		if key == "0" then
+			player.Character.Humanoid.WalkSpeed = standardWalkspeed * speedBoost
+	end
+end)
+mouse.KeyUp:connect(function (key)
+	if key == "0" then
+		player.Character.Humanoid.WalkSpeed = standardWalkspeed
+	end
+end)
