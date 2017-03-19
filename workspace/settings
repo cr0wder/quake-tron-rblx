@@ -1,0 +1,10 @@
+game.Players.PlayerAdded:connect(function (player)
+	local folder = Instance.new('Folder', Player)
+	Folder.Name= 'leaderstats'
+	local Playing = Instance.new('BoolValue', Player)
+	Playing.Name = 'Playing'
+	Playing.Value = false
+	--local Money = Instance.new('IntValue', Folder)
+	--Money.Name = 'Money'
+	--Money.Value = '0' -- For other gamemode. Seeeecreeettttt
+end)
