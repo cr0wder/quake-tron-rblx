@@ -1,0 +1,61 @@
+-- Project: Xenon Alpha v0.02 by Crow_Studios
+
+--Tables
+Winners = {}
+
+--Modules
+Settings = require(script.Settings)
+
+--Game Variables
+Intermission = Settings.Intermission
+GameTime = Settings.GameTime
+
+--Functions yo
+function ChangeText(Text)
+	local Players = game.Players:GetPlayers()
+	for i = 1 #Players do
+		Players [i] .PLayerGui.Main.Time.Text = Text	
+	end
+end
+ 
+function GetMap()
+	local Maps = game.ReplicatedStorage.Maps:GetChildren()
+	local PickMap = math.random(1, #Maps)
+	local SelectMap = Maps[PickMap]:Clone()
+	SelectedMap.Name = 'Map'
+	SelectedMap.Parent = game.Workspace
+	)
+end
+
+function RemoveMap()
+	if game.Workspace:FindFirstChild('Map') then
+		game.Workspace.Map:remove
+	end
+end
+
+--Game
+while true do
+	for i - Intermission, 0, -1 do
+		ChangeText('Intermission ' ..i)
+		wait(1)
+	end
+	
+	local Players = game.Players:GetPlayers()
+	for i = 1, #Players do
+		Players[i].Playing.Value = true
+	end
+	
+	--For loops to get the map
+	ChangeText('Game Starting! ')
+	wait(2)
+	GetMap()
+	
+	local Players = game.Players:GetPlayers
+	for i = 1, #Players do
+		if Players[i]Playing.Value == true then
+	end	
+	
+--while true do
+	--if game.Players.NumPlayers >= 2 then
+		
+	--end --Buggy
